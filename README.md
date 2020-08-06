@@ -1,2 +1,2 @@
 # vue-demo
-Create a demostration on the capabilities of the vue framework.
+Create a demonstration on the capabilities of the vue framework.
