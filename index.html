@@ -13,7 +13,8 @@
 </head>
 <body>
     <div id="main-title"></div>
-    <div id="subheading"></div>
+    <div id="article">
+
     <div id="app">
         {{ message }}
     </div>
@@ -23,8 +24,19 @@
             to see my dynamically bound title!
         </span>
     </div>
+    <div id="app-3">
+        <span v-if="seen">Now you see me</span>
+    </div>
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.banana }}
+            </li>
+        </ol>
+    </div>
 
 
+</div>
 
 
 <script>
@@ -40,6 +52,26 @@
             message: 'Some new message on ' + new Date().toLocaleString()
         }
     })
+    var app3 = new Vue({
+	    el: '#app-3', 
+	    data: {
+		    seen: false
+	    }
+    })
+    var app4 = new Vue({
+    	el: '#app-4', 
+    	data: {
+    		todos: [
+    			{ banana: 'Learn JavaScript' },
+    			{ banana: 'Learn Vue' },
+                { banana: 'Build something awesome' },
+                { banana: 'New item' }
+    		]
+	    }
+    })
+
+
+
 </script>
     
 </body>
